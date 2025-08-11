@@ -5,23 +5,14 @@ const Slide = [
   {
     id: 1,
     image: Foot_banner1,
-    title: "Kiddies Camp Collection",
-    tag: "UP TO 50% OFF",
-    btnText: "Shop now",
   },
   {
     id: 2,
     image: Foot_banner2,
-    title: "Corporate Men Collection",
-    tag: "UP TO 60% OFF",
-    btnText: "Shop now",
   },
   {
     id: 3,
     image: Foot_banner3,
-    title: "Funky Ladies Set",
-    tag: "UP TO 30% OFF",
-    btnText: "Shop now",
   },
 ];
 
