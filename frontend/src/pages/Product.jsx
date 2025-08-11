@@ -5,7 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 import StarRating from '../components/Rating';
 import { cart, heart, swap } from '../assets/assets';
 import StarReviewsRating from '../components/StarReviewsRating';
-import ProductItem from '../components/productItem';
+import ProductItem from '../components/ProductItem';
 import RelatedProductsSlider from '../components/RelatedProduct';
 import { useCart } from '../context/CartContext';
 import { toast } from "react-toastify"
