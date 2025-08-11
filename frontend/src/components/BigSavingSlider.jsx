@@ -1,63 +1,63 @@
-import React from 'react'
-import ProductSlider from './Slider';
-
-import {
-    big_saving_1,
-    big_saving_2,
-    Foot_banner1,
-    Foot_banner2,
-    Foot_banner3,
-} from "../assets/assets"
+import React from "react";
+import { Foot_banner1, Foot_banner2, Foot_banner3 } from "../assets/assets";
 
 const Slide = [
-    {
-        id: 1,
-        image: Foot_banner1,
-        title: "Apple iPhone 13 128 GB Pink",
-        at: "Starting At Only",
-        price: 1234,
-
-    },
-    {
-        id: 2,
-        image: Foot_banner2,
-        title: "Buy New Trend Women Black Blend Top",
-        at: "Starting At Only",
-        price: 1234,
-    }, {
-        id: 2,
-        image: Foot_banner3,
-        title: "Buy New Trend Women Black Blend Top",
-        at: "Starting At Only",
-        price: 1234,
-    },
-
-]
-
-
+  {
+    id: 1,
+    image: Foot_banner1,
+    title: "Kiddies Camp Collection",
+    tag: "UP TO 50% OFF",
+    btnText: "Shop now",
+  },
+  {
+    id: 2,
+    image: Foot_banner2,
+    title: "Corporate Men Collection",
+    tag: "UP TO 60% OFF",
+    btnText: "Shop now",
+  },
+  {
+    id: 3,
+    image: Foot_banner3,
+    title: "Funky Ladies Set",
+    tag: "UP TO 30% OFF",
+    btnText: "Shop now",
+  },
+];
 
 const BigSavingSlider = () => {
-    const slides = Slide.map((num) => (
-        <div
-            key={num.id}
-            className=" relative h-[250px] md:h-[350px] lg:h-[500px] xl:h-[600px] items-center justify-center rounded-xl shadow-lg transform no-select"
-        >
-            <img src={num.image} alt={num.title} className="h-full object-center rounded-md" />
-        </div>
-    ));
+  return (
+    <div className="flex flex-col lg:flex-row gap-4 px-4 lg:px-12">
+      {/* Left big image - 65% width */}
+      <div className="relative w-full lg:w-[65%] rounded-xl overflow-hidden">
+        <img
+          src={Slide[0].image}
+          alt={Slide[0].title}
+          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+      </div>
 
-    return (
-        <div className=" mx-auto">
-            <ProductSlider slidesPerView={1}
-                autoSlide={true}
-                autoSlideInterval={5000}
-                loop={true}
-                showDots={true}
-                showArrows={true} >
-                {slides}
-            </ProductSlider>
-        </div>
-    );
-}
+      {/* Right two stacked images - 35% width */}
+      <div className="w-full lg:w-[35%] flex flex-col gap-4">
+        {Slide.slice(1).map((item) => (
+          <div
+            key={item.id}
+            className="relative flex-1 rounded-xl overflow-hidden"
+          >
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+
+            {/* Tag */}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default BigSavingSlider;

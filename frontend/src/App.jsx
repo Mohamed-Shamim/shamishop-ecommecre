@@ -12,13 +12,13 @@ import ErrorBoundary from "./components/Error";
 import Footer from "./components/Footer";
 import CartPage from "./pages/Cart";
 import { ToastContainer } from "react-toastify";
-import Header from "./components/Header";
+import { HeaderNav } from "./components/HeaderNav";
 
 const App = () => {
   return (
     <div className="">
       <div className="">
-        <Header />
+        <HeaderNav />
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
