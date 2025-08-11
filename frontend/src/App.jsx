@@ -17,22 +17,18 @@ import { HeaderNav } from "./components/HeaderNav";
 const App = () => {
   return (
     <div className="">
-      <div className="">
-        <HeaderNav />
-      </div>
+      <HeaderNav />
+
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route path="/help-center" element={<HelpCenter />} />
         <Route path="/order-tracking" element={<OrderTracking />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/product/:id" element={<Product />} />
-        <Route path="/" element={<ProductLists />} />
         <Route path="/products" element={<ProductLists />} />
-        {/* <Route path='products/:id' element{<Pro} */}
-        <Route path="cart" element={<CartPage />} />
-
-        <Route path="*" element={<NotFount />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/" element={<Home />} />
+        {/* <Route path="*" element={<NotFount />} /> */}
       </Routes>
       <Footer />
       <ToastContainer />

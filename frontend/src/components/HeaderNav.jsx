@@ -51,13 +51,14 @@ export const HeaderNav = () => {
   useEffect(() => {
     if (debouncedSearch) {
       searchParams.set("search", debouncedSearch);
-      navigate({ search: searchParams.toString() });
+      navigate(`/products?${searchParams.toString()}`);
     } else {
       searchParams.delete("search");
-      navigate({ search: searchParams.toString() });
+      if (location.pathname === "/products" && location.search.includes("search=")) {
+        navigate(`/products?${searchParams.toString()}`, { replace: true });
+      }
     }
-    navigate(`/products?${searchParams.toString()}`, { replace: true });
-  }, [debouncedSearch]);
+  }, [debouncedSearch, navigate, location.pathname, location.search]);
 
   const handleCategoryChange = (category) => {
     const newParams = new URLSearchParams();

@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import HomeCategories from "../components/HomeCategories";
 import PopularProduct from "../components/PopularProduct";
 import BigSavingSlider from "../components/BigSavingSlider";
-import { big_saving_3, big_saving_4, delivery_car } from "../assets/assets";
+import { delivery_car } from "../assets/assets";
 import LatestProducts from "../components/LatestProducts";
 import FeaturedProducts from "../components/FeaturedProducts";
 import BestDealsSlide from "../components/BestDeals";
