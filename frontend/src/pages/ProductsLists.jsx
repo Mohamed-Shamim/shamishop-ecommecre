@@ -2,7 +2,7 @@ import { useState, useEffect, useContext, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../components/Loading';
 import { ProductContext } from '../context/ProductContext';
-import ProductItem from '../components/productItem';
+import ProductItem from '../components/ProductItem';
 import PriceFilter from '../components/PriceFilter';
 import RatingFilter from '../components/RatingFilter';
 import CategoryFilter from '../components/CategoryFilter';
